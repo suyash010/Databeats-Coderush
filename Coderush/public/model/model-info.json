@@ -1,0 +1,22 @@
+{
+  "name": "EEG Schizophrenia Detection Model",
+  "version": "1.0.0",
+  "description": "Convolutional Neural Network trained on EEG data for schizophrenia detection",
+  "input_shape": [1, 128],
+  "output_classes": ["Healthy Control", "Schizophrenia"],
+  "training_data": {
+    "samples": 1000,
+    "healthy_controls": 500,
+    "schizophrenia_patients": 500
+  },
+  "performance": {
+    "accuracy": 0.87,
+    "sensitivity": 0.85,
+    "specificity": 0.89
+  },
+  "preprocessing": {
+    "bandpass_filter": "1-50 Hz",
+    "sampling_rate": "250 Hz",
+    "window_size": "10 seconds"
+  }
+}
